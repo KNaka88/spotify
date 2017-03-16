@@ -1,9 +1,5 @@
-
-
-body {
-  // background-image: url('/../img/background.png');
-}
-
+$grey: #ebeef4;
+$lightGreen: #d5f7a5;
 
 button {
   padding-top: 10px;
@@ -12,10 +8,6 @@ button {
 
 .btn:hover {
   opacity: 0.8;
-}
-
-h1 {
-
 }
 
 img {
@@ -28,19 +20,17 @@ li {
 
 }
 
-.top_tracks {
-
-}
 
 .card {
   height:350px;
-  border: 2px solid red;
+  border: 2px solid lightgray;
   background-color: white;
+  box-shadow: 5px 5px 4px $grey;
 }
 
 .card-header {
   width: 300px;
-  background-color: green;
+  background-color: $lightGreen;
   background-position: center;
   background-size: cover;
   margin-left: 10px;
@@ -68,16 +58,16 @@ li {
 
 #artist_form {
   margin-bottom: 5%;
-
-
   input{
     margin-bottom: 20px;
   }
-
 }
 
-
-
+#artist_name {
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding-left: 10%;
+}
 
 #title {
   text-align: center;
@@ -87,4 +77,19 @@ li {
   letter-spacing: 12px;
   padding-top: 20%;
   margin-bottom: 7%;
+}
+
+#top-tracks-heading {
+  padding-left: 11%;
+  padding-top: 15px;
+}
+
+#top_artist_img {
+  position:relative;
+  width: 85%;
+  left: 10%;
+  margin: auto, auto;
+  top: 15px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px $grey;
 }
