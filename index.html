@@ -3,26 +3,42 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
      <script type="text/javascript" src="build/js/app.js"></script>
     <title></title>
   </head>
   <body>
-    <form id="artist_form">
-      <input type="text" name="artist" id='artist' placeholder="Enter artist name here...">
-      <button type="submit" name="button">Search Artist</button>
-    </form>
+    <div class="container">
+      <h1 id='title'>Music Finder</h1>
+      <div class="row">
+        <div class='col-md-12'>
+            <form id="artist_form">
+              <input id="artist" class="form-control" type="text" name="artist" placeholder="Enter artist name here...">
+              <button class="btn center-block"type="submit" name="button">Search Artist</button>
+            </form>
+        </div>
+        <div class='col-md-12'>
+          <span id="artist_name"></span>
+          <span id="artist_image"></span>
+        </div>
 
-    <span id="artist_name"></span>
-    <span id="artist_image"></span>
+        <div class='col-md-12'>
+          <div class='row top_tracks'>
+            <span id="top_tracks"></span>
+            <span id="tracks_samples"></span>
+          </div>
+        </div>
+        <div class='col-md-12'>
+          <div class='row'>
 
-    <ul id="album_names">
+            <span id="album_names"></span>
 
-    </ul>
-    <p id="album_images">
-    </p>
 
-    <p id="top_tracks"></p>
-
+          </div>
+        </div>
+      </div>
+    </div> <!--end of container-->
   </body>
 </html>

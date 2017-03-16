@@ -1,0 +1,90 @@
+
+
+body {
+  // background-image: url('/../img/background.png');
+}
+
+
+button {
+  padding-top: 10px;
+  width: 180px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+h1 {
+
+}
+
+img {
+  width: 90%;
+}
+
+li {
+  list-style: none;
+  max-width: 400px;
+
+}
+
+.top_tracks {
+
+}
+
+.card {
+  height:350px;
+  border: 2px solid red;
+  background-color: white;
+}
+
+.card-header {
+  width: 300px;
+  background-color: green;
+  background-position: center;
+  background-size: cover;
+  margin-left: 10px;
+  text-align: center;
+  padding: 1px;
+}
+
+.card-img-top {
+  display:block;
+  margin: 0 auto;
+  // padding-top: 5px;
+  // padding-bottom: 10px;
+}
+
+
+.track_names {
+  left: 150px;
+}
+
+.track_previews {
+  text-align: left;
+  left:-120px;
+}
+
+
+#artist_form {
+  margin-bottom: 5%;
+
+
+  input{
+    margin-bottom: 20px;
+  }
+
+}
+
+
+
+
+#title {
+  text-align: center;
+  font-size: 9rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 12px;
+  padding-top: 20%;
+  margin-bottom: 7%;
+}
