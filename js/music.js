@@ -10,6 +10,8 @@ Artist.prototype.showArtist = function(userInput, callback){
   var artistId = "";
   var album_names = [];
   var album_images = [];
+  var top_track_names = [];
+  var top_track_previews = [];
 
 
   $.get("https://api.spotify.com/v1/search?q="+userInput+"&type=artist")
@@ -22,14 +24,22 @@ Artist.prototype.showArtist = function(userInput, callback){
     })
 
     .then(function(response2){
-        for(var i=0; i<response2.items.length; i++){
-            album_names.push(response2.items[i].name);
-            album_images.push(response2.items[i].images[1].url);
+      for(var i=0; i<response2.items.length; i++){
+          album_names.push(response2.items[i].name);
+          album_images.push(response2.items[i].images[1].url);
+      }
+      return $.get("https://api.spotify.com/v1/artists/"+artistId+"/top-tracks?country=US");
+    })
+
+    .then(function(response3){
+      for(var z=0; z<response3.tracks.length; z++){
+          top_track_names.push(response3.tracks[z].name);
+          top_track_previews.push(response3.tracks[z].preview_url);
       }
     })
 
     .then(function(){
-      callback(artistName, displayImages, artistId, album_names, album_images);
+      callback(artistName, displayImages, artistId, album_names, album_images, top_track_names, top_track_previews);
     });
 
 };
