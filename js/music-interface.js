@@ -4,9 +4,10 @@ var displayArtist = function(artistName, displayImages, artistId, albums) {
   $('#artist_image').append("<img src='" + displayImages + "'>");
   $('#artist_name').text(artistName);
 
-  for (var album in albums) {
-    $('#albums').html("<li>" + album + "</li>");
-  }
+  albums.forEach(function(album){
+      $('#albums').append("<li>" + album + "</li>");
+  });
+
 };
 
 
