@@ -1,13 +1,14 @@
 var Artist = require('./../js/music.js').artistModule;
 
-var displayArtist = function(artistName, displayImages, artistId, albums) {
+var displayArtist = function(artistName, displayImages, artistId, album_names, album_images) {
   $('#artist_image').append("<img src='" + displayImages + "'>");
   $('#artist_name').text(artistName);
 
-  albums.forEach(function(album){
-      $('#albums').append("<li>" + album + "</li>");
-  });
 
+  for(var i=0; i<album_names.length; i++){
+    $('#album_names').append("<li>" + album_names[i] + "</li>");
+    $('#album_images').append("<img src='" + album_images[i] + "'>");
+  }
 };
 
 
